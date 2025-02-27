@@ -22,7 +22,7 @@ mv cut-lemon interp_cut-lemon # make sure the folder name begins with interp_ or
 ```
 
 
-# Training
+## Training
 We provide the training script for TimeFormer, here we use [Deformable-3D-Gaussians](https://github.com/ingra14m/Deformable-3D-Gaussians) as the backbone.
 ```shell
 # Training with TimeFormer
