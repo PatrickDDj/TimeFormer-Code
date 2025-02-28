@@ -1,7 +1,7 @@
 # TimeFormer: Capturing Temporal Relationships of Deformable 3D Gaussians for Robust Reconstruction
 
 ## [Project page](https://patrickddj.github.io/TimeFormer/) | [Paper](https://arxiv.org/abs/2411.11941)
-
+![image](https://patrickddj.github.io/TimeFormer/images/timeformer.png)
 
 ## Environment
 ```shell
