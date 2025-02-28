@@ -1,9 +1,20 @@
 # TimeFormer: Capturing Temporal Relationships of Deformable 3D Gaussians for Robust Reconstruction
 
 ## [Project page](https://patrickddj.github.io/TimeFormer/) | [Paper](https://arxiv.org/abs/2411.11941)
+
+![image](https://patrickddj.github.io/TimeFormer/images/banner.png)
+
+We propose **TimeFormer**, a Transformer module that implicitly models the motion pattern via Temporal Attention from a learning perspective (right). TimeFormer is plug-and-play to existing deformable 3D Gaussian reconstruction methods and enhances reconstruction results (left and middle) without affecting their original inference speed.
+
+
+
+## Method
+
 ![image](https://patrickddj.github.io/TimeFormer/images/timeformer.png)
 
-Dynamic scene reconstruction is a long-term challenge in 3D vision. Recent methods extend 3D Gaussian Splatting to dynamic scenes via additional deformation fields and apply explicit constraints like motion flow to guide the deformation. However, they learn motion changes from individual timestamps independently, making it challenging to reconstruct complex scenes, particularly when dealing with violent movement, extreme-shaped geometries, or reflective surfaces. To address the above issue, we design a plug-and-play module called TimeFormer to enable existing deformable 3D Gaussians reconstruction methods with the ability to implicitly model motion patterns from a learning perspective. Specifically, TimeFormer includes a Cross-Temporal Transformer Encoder, which adaptively learns the temporal relationships of deformable 3D Gaussians. Furthermore, we propose a two-stream optimization strategy that transfers the motion knowledge learned from TimeFormer to the base stream during the training phase. This allows us to remove TimeFormer during inference, thereby preserving the original rendering speed. Extensive experiments in the multi-view and monocular dynamic scenes validate qualitative and quantitative improvement brought by TimeFormer.
+**The Framework of Deformable 3D Gaussians Reconstruction with TimeFormer.** Existing deformable 3D Gaussians framework usually includes the canonical space and the deformation field (first row), we incorporate TimeFormer to capture cross-time relationships and explore motion patterns implicitly (second row). We share weights of two deformation fields to transfer the learned motion knowledge. This allows us to exclude this Auxiliary Training Module during inference.
+
+
 
 
 
