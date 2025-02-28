@@ -5,6 +5,20 @@
 
 Dynamic scene reconstruction is a long-term challenge in 3D vision. Recent methods extend 3D Gaussian Splatting to dynamic scenes via additional deformation fields and apply explicit constraints like motion flow to guide the deformation. However, they learn motion changes from individual timestamps independently, making it challenging to reconstruct complex scenes, particularly when dealing with violent movement, extreme-shaped geometries, or reflective surfaces. To address the above issue, we design a plug-and-play module called TimeFormer to enable existing deformable 3D Gaussians reconstruction methods with the ability to implicitly model motion patterns from a learning perspective. Specifically, TimeFormer includes a Cross-Temporal Transformer Encoder, which adaptively learns the temporal relationships of deformable 3D Gaussians. Furthermore, we propose a two-stream optimization strategy that transfers the motion knowledge learned from TimeFormer to the base stream during the training phase. This allows us to remove TimeFormer during inference, thereby preserving the original rendering speed. Extensive experiments in the multi-view and monocular dynamic scenes validate qualitative and quantitative improvement brought by TimeFormer.
 
+
+
+> Note: TimeFormer can be easily **plug-and-play to all existing and future deformable 3D Gaussian framework!**
+>
+> All you need include:
+>
+> 	1. Copy TimeFormer.py
+> 	1. Add TimeFormer branch and its loss
+> 	1. Add backpropagation of TimeFormer
+
+
+
+
+
 ## Environment
 ```shell
 pip install torch torchvision
