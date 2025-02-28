@@ -47,7 +47,8 @@ python train_timeformer.py -s data/interp_cut-lemon1 -m output/interp_cut-lemon1
     --n_layer 4 --weight_reg 0.0001 --weight_t 0.8 --batch 4
 
 # Rendering
-python render.py -m output/interp_cut-lemon1_batch_4_trans_0.8_reg_0.0001_layer_4_random --mode render --eval --skip_train
+python render.py -m output/interp_cut-lemon1_batch_4_trans_0.8_reg_0.0001_layer_4_random \
+		--mode render --eval --skip_train
 
 # Evaluation
 python metrics.py -m output/interp_cut-lemon1_batch_4_trans_0.8_reg_0.0001_layer_4_random
