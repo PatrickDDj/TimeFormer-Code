@@ -42,12 +42,11 @@ pip install -r requirements.txt
 ## Dataset
 ```shell
 mkdir data
-mkdir data/hypernerf
-cd data/hypernerf
+cd data
 wget https://github.com/google/hypernerf/releases/download/v0.1/interp_cut-lemon.zip 
 
 unzip interp_cut-lemon.zip 
-mv cut-lemon interp_cut-lemon # make sure the folder name begins with interp_ or vrig_ ...
+mv cut-lemon1 interp_cut-lemon1 # make sure the folder name begins with interp_ or vrig_ ...
 ```
 
 
