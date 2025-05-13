@@ -32,6 +32,8 @@ We propose **TimeFormer**, a Transformer module that implicitly models the motio
 
 ## Environment
 ```shell
+git clone https://github.com/PatrickDDj/TimeFormer-Code.git --recursive
+cd TimeFormer-Code
 pip install torch torchvision
 pip install -r requirements.txt
 ```
