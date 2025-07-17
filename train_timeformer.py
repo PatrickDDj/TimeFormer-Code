@@ -180,7 +180,7 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations):
 
         loss = Ll1 + weight_t * Ll1_t + weight_reg * (l_reg if iteration >=  opt.warm_up else 0.0)
             
-        loss += (1.0 - opt.lambda_dssim) * Ll1 + opt.lambda_dssim * (1.0 - ssim(image, gt_image))
+        # loss += (1.0 - opt.lambda_dssim) * Ll1 + opt.lambda_dssim * (1.0 - ssim(image, gt_image))
         
         loss.backward()
 
